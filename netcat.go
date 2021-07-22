@@ -9,11 +9,6 @@ import (
 	"os"
 )
 
-var (
-	port = flag.Int("p", 3090, "port")
-	host = flag.String("h", "localhost", "host")
-)
-
 func main() {
 	flag.Parse()
 	conn, err := net.Dial("tcp", fmt.Sprintf("%s:%d", *host, *port))
